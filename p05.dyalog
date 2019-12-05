@@ -1,6 +1,5 @@
 ⎕IO←0
 p←⊢⌿⍎¨⎕CSV'p05.txt'
-
 r←{
     state←⍵ ⋄ sel←{⍺=0:state[⍵] ⋄ ⍵}
     ops←99,⍨1+⍳8 ⋄ offs←4 4 2 2 3 3 4 4 1
@@ -13,6 +12,5 @@ r←{
     op∊7 8:n∇((op-7)⌷d1(<,=)d2)@p3⊢⍵
     op=99:⍬
 }
-
 inp←1 ⋄ ¯1↑0 r p ⍝ part 1
 inp←5 ⋄ 0 r p ⍝ part 2
