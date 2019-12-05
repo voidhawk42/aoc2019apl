@@ -7,8 +7,8 @@ r←{
     offs←4 4 2 2 3 3 4 4 1
     op p1 p2 p3←4↑⍺↓⍵
     m3 m2 m1 o1 o2←op⊤⍨5⍴10
-    op←10⊥o1 o2 ⋄ n j←(⍺∘+,⊢)offs⌷⍨ops⍳op
-    p1_d p2_d p3_d←3↑sel/(j-1)↑m1 m2 m3,⍪p1 p2 p3
+    op←10⊥o1 o2 ⋄ n j←(⍺∘+,-∘1)offs⌷⍨ops⍳op
+    p1_d p2_d p3_d←3↑sel/j↑m1 m2 m3,⍪p1 p2 p3
     op=1:n∇(p1_d+p2_d)@p3⊢⍵
     op=2:n∇(p1_d×p2_d)@p3⊢⍵
     op=3:n∇inp@p1⊢⍵
