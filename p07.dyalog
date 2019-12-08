@@ -16,5 +16,5 @@ r←{
 }
 mems ics h inps←4⍴⊂⍬ ⋄ prms←{1≥≢⍵:⍵ ⋄ ⊃,/⍵,¨¨∇¨⍵∘~¨⍵}
 init←{mems⊢←↑5⍴⊂p ⋄ ics h⊢←↓2 5⍴0 ⋄ inps[0],←0⊣inps⊢←,¨⍵}
-f←{⊃⊃inps⊣{5|⍵+1⊣r ⍵}⍣{∧/h}0⊣init ⍵} ⋄ ⌈/f¨prms ⍳5 ⍝ part 1
-⌈/f¨prms 5+⍳5 ⍝ part 2
+f←{⊃⊃inps⊣{5|⍵+1⊣r ⍵}⍣{∧/h}0⊣init ⍵}
+(⌈/f¨)¨↓0 5∘.+prms ⍳5 ⍝ parts 1 and 2
